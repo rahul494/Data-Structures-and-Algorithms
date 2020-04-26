@@ -3,7 +3,7 @@ class Solution(object):
         """
         :type chars: List[str]
         :rtype: int
-        """
+        """             
 
 
         
