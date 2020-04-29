@@ -6,6 +6,14 @@
 # Write a function that takes in a non-empty string and that returns a boolean
 # representing whether the string is a palindrome.
 
+# Sample Input
+
+# 	string = "abcdcba"
+
+# Sample Output
+
+# 	true
+
 def isPalindrome(string):
     # Write your code here.
 	idx1 = 0
