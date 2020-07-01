@@ -13,6 +13,9 @@
 # array = [5, 1, 22, 25, 6, -1, 8, 10]
 # sequence = [1, 6, -1, 10]
 
+# Output
+# true
+
 def isValidSubsequence(array, sequence):
     arr_idx = 0
 	seq_idx = 0
@@ -25,3 +28,11 @@ def isValidSubsequence(array, sequence):
 			arr_idx += 1
 			
 	return seq_idx == len(sequence)
+
+assert isValidSubsequence([5, 1, 22, 25, 6, -1, 8, 10], [1, 6, -1, 10]) == True
+assert isValidSubsequence([1, 2, 3, 4], [1, 3, 4]) == True
+assert isValidSubsequence([1, 2, 3], [1, 2, 3]) == True
+assert isValidSubsequence([1, 2, 3], [2, 5]) == False
+assert isValidSubsequence([1], [2]) == False
+
+print('All tests have passed sucessfully')
