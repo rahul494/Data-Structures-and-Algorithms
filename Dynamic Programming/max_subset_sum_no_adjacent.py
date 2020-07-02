@@ -1,5 +1,5 @@
- # AlgoExpert - Max Subset Sum No Adjacent
- 
+# AlgoExpert - Max Subset Sum No Adjacent
+
 #   Write a function that takes in an array of positive integers and returns the
 #   maximum sum of non-adjacent elements in the array.
 #   If a sum can't be generated, the function should return 0
@@ -10,7 +10,7 @@
 
 #   Output
 
-#     330 (75 + 120 + 135) 
+#     330 (75 + 120 + 135)
 
 def maxSubsetSumNoAdjacent(array):
 
@@ -29,10 +29,13 @@ def maxSubsetSumNoAdjacent(array):
 
     return first
 
+
 assert maxSubsetSumNoAdjacent([7, 10, 12, 7, 9, 14]) == 33
 assert maxSubsetSumNoAdjacent([75, 105, 120, 75, 90, 135]) == 330
 assert maxSubsetSumNoAdjacent([]) == 0
 assert maxSubsetSumNoAdjacent([1]) == 1
 assert maxSubsetSumNoAdjacent([1, 2]) == 2
+assert maxSubsetSumNoAdjacent([1, 15, 2]) == 15
+assert maxSubsetSumNoAdjacent([1, 2, 15]) == 16
 
 print('All tests have passed successfully')
