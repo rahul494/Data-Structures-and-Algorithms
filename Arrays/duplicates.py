@@ -13,16 +13,27 @@
 # Input: [1,2,3,4]
 # Output: false
 
-class Solution(object):
-    def containsDuplicate(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: bool
-        """
-        seen = set()
-        for num in nums:
-            if num in seen:
-                return True
-            else:
-                seen.add(num)
-        return False
+
+def containsDuplicate(nums):
+    """
+    :type nums: List[int]
+    :rtype: bool
+    """
+    seen = set()
+    for num in nums:
+        if num in seen:
+            return True
+        else:
+            seen.add(num)
+    return False
+
+
+assert containsDuplicate([1]) == False
+assert containsDuplicate([1, 1]) == True
+assert containsDuplicate([1, 1, 1]) == True
+assert containsDuplicate([1, 2]) == False
+assert containsDuplicate([1, 1, 1, 2, 2]) == True
+assert containsDuplicate([-1, 1]) == False
+assert containsDuplicate([10, 20, 200, 10, 200, 250, 10]) == True
+
+print('All tests have passed sucessfully')
