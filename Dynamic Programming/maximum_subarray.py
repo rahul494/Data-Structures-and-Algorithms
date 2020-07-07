@@ -1,3 +1,13 @@
+# Leetcode - 53. Maximum Subarray
+
+# Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+
+# Example:
+
+# Input: [-2,1,-3,4,-1,2,1,-5,4]
+# Output: 6
+# Explanation: [4,-1,2,1] has the largest sum = 6.
+
 def maxSubArray(nums):
 
     """
@@ -16,4 +26,10 @@ def maxSubArray(nums):
     return resu
 
 
-print(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
+assert maxSubArray([-2,1,-3,4,-1,2,1,-5,4]) == 6
+assert maxSubArray([1,-7,4,-1,21,1,-5,9]) == 29
+assert maxSubArray([-2,-1, 1]) == 1
+assert maxSubArray([-2,2]) == 2
+assert maxSubArray([1]) == 1
+
+print('All tests have passed successfully')
