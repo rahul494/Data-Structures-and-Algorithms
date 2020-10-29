@@ -7,10 +7,21 @@ class BinaryTree:
 
 
 def branchSums(root):
-    # Write your code here.
-    pass
+    sums = []
+    calculateBranchSums(root, 0, sums)
+    return sums
 
+def calculateBranchSums(node, runningSum, sums):
+    if node is None:
+        return
 
+    newRunningSum = runningSum + node.value
+    if node.left is None and node.right is None:
+        sums.append(newRunningSum)
+        return
+
+    calculateBranchSums(node.left, newRunningSum, sums)
+    calculateBranchSums(node.right, newRunningSum, sums)
 
 root = BinaryTree(1)
 root.left = BinaryTree(2)
@@ -22,3 +33,6 @@ root.right.right = BinaryTree(7)
 root.left.left.left = BinaryTree(8)
 root.left.left.right = BinaryTree(9)
 root.left.right.left = BinaryTree(10)
+
+assert branchSums(root) == [15, 16, 18, 10, 11]
+print("Test case has passed")
