@@ -11,6 +11,7 @@ def branchSums(root):
     calculateBranchSums(root, 0, sums)
     return sums
 
+
 def calculateBranchSums(node, runningSum, sums):
     if node is None:
         return
@@ -20,8 +21,6 @@ def calculateBranchSums(node, runningSum, sums):
         sums.append(newRunningSum)
         return
 
-    calculateBranchSums(node.left, newRunningSum, sums)
-    calculateBranchSums(node.right, newRunningSum, sums)
 
 root = BinaryTree(1)
 root.left = BinaryTree(2)
