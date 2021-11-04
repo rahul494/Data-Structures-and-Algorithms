@@ -1,17 +1,17 @@
-# 1108. Defanging an IP Address
+""" 1108. Defanging an IP Address
 
-# Share
-# Given a valid (IPv4) IP address, return a defanged version of that IP address.
+Share
+Given a valid (IPv4) IP address, return a defanged version of that IP address.
 
-# A defanged IP address replaces every period "." with "[.]".
+A defanged IP address replaces every period "." with "[.]".
 
-# Example 1:
+Example 1:
 
-# Input: address = "1.1.1.1"
-# Output: "1[.]1[.]1[.]1"
+Input: address = "1.1.1.1"
+Output: "1[.]1[.]1[.]1" """
 
 class Solution(object):
-    def defangIPaddr(self, address):
+    def de_fang_ip_addr(self, address):
         """
         :type address: str
         :rtype: str
