@@ -4,6 +4,7 @@ import math
 
 
 def smallest_subarray_with_given_sum(s, arr):
+<<<<<<< HEAD
     window_sum, window_start = 0
     min_length = math.inf
 
@@ -19,3 +20,7 @@ def smallest_subarray_with_given_sum(s, arr):
         return 0
 
     return min_length
+=======
+    
+    return -1
+>>>>>>> 7c89906899074062e2d46b4073b7c7cac84c4ff7
