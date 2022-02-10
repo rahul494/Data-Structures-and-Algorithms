@@ -23,10 +23,12 @@ def twoSum(nums, target):
     :rtype: List[int]
     """
 
-    hist = {nums[0]: 0}
+    hist = {}
 
-    for i in range(1, len(nums)):
+    for i in range(len(nums)):
         if target - nums[i] in hist:
             return [i, hist[target - nums[i]]]
         else:
             hist[nums[i]] = i
+
+print(twoSum([1,2,4,5,2,1], 7))
