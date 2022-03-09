@@ -31,4 +31,20 @@ def twoSum(nums, target):
         else:
             hist[nums[i]] = i
 
-print(twoSum([1,2,4,5,2,1], 7))
+
+def all_pairs(nums, target):
+
+    result = []
+    history = {}
+
+    for i in range(len(nums)):
+
+        if target - nums[i] in history:
+            result.append(sorted((i, history[target - nums[i]])))
+        else:
+            history[nums[i]] = i
+
+    return result
+
+
+print(twoSum([1, 2, 4, 5, 2, 1], 7))
