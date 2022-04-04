@@ -10,8 +10,8 @@ def group_anagrams(strings):
         if tuple(key) in dict:
             dict[tuple(key)].append(str)
         else:
-            dict[tuple(key)] += [str]
+            dict[tuple(key)] = [str]
 
-    return dict
+    return list(dict.values())
 
 print(group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
