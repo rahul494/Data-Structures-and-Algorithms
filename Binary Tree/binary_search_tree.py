@@ -28,6 +28,3 @@ class BST:
                 self._insert(self, data, cur_node.right)
         else:
             print("Value is already present in tree")
-    
-    def find(self, data):
-        if self.root
