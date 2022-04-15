@@ -15,9 +15,7 @@ def largest_unique_character_count_of_k_size_subtring(str, k):
 
         # if window size is greater than k, remove characters of the left
         if high - low + 1 > k:
-            if history[str[low]] > 2:
-                history[str[low]] -= 1
-            elif history[str[low]] == 2:
+            if history[str[low]] >= 2:
                 history[str[low]] -= 1
             else:
                 del history[str[low]]
