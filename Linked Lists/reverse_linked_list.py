@@ -23,7 +23,7 @@ class LinkedList:
         prev = None
         while self.head:
             temp = self.head
-            self.head = self.head.next
+            self.head = self.head.next 
 
 
 
