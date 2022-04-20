@@ -21,10 +21,11 @@ class LinkedList:
 
     def reverse_list(self):
         prev = None
-        while self.head:
+        while self.head.next:
             temp = self.head
             self.head = self.head.next 
-
+            prev = temp
+            temp.next = prev
 
 
 
@@ -33,4 +34,5 @@ ll.add_first(Node(4))
 ll.add_first(Node(3))
 ll.add_first(Node(2))
 ll.add_first(Node(1))
+ll.reverse_list()
 ll.print()
