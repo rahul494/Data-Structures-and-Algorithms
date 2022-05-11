@@ -3,7 +3,7 @@ class Node:
         self.value = value
         self.next = next
 
-def has_cycle(head):
+def cycle_length(head):
     slow, fast = head, head
 
     while fast and fast.next:
@@ -11,9 +11,16 @@ def has_cycle(head):
         fast = fast.next.next
 
         if slow == fast:
-            return True
+            curr_node = slow.next
+            curr_length = 1
+
+            while curr_node != slow:
+                curr_node = curr_node.next
+                curr_length += 1
+
+            return curr_length
     
-    return False
+    return 0
 
     
 def main():
@@ -23,12 +30,15 @@ def main():
     head.next.next.next = Node(4)
     head.next.next.next.next = Node(5)
     head.next.next.next.next.next = Node(6)
-    print("LinkedList has cycle " + str(has_cycle(head)))
+    print("LinkedList has cycle of length " + str(cycle_length(head)))
 
     head.next.next.next.next.next.next = head.next.next
-    print("LinkedList has cycle " + str(has_cycle(head)))
+    print("LinkedList has cycle of length " + str(cycle_length(head)))
 
     head.next.next.next.next.next.next = head.next.next.next
-    print("LinkedList has cycle " + str(has_cycle(head)))
+    print("LinkedList has cycle of length " + str(cycle_length(head)))
+
+    head.next = head
+    print("LinkedList has cycle of length " + str(cycle_length(head)))
 
 main()
