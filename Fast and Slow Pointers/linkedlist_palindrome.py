@@ -4,18 +4,21 @@ class Node:
         self.next = next
 
 def is_palindrome(head):
+    if not head or not head.next:
+        return True
+
     slow, fast = head, head
     prev, temp = None, None
 
     while fast and fast.next:
+        
         fast = fast.next.next
-
         # change pointer to previous node
         temp = slow.next
         slow.next = prev
         prev = slow
         slow = temp
-
+        
     while temp and prev and temp.next and prev.next:
         if temp.value != prev.value:
             return False
@@ -23,10 +26,10 @@ def is_palindrome(head):
         temp = temp.next
         prev = prev.next
     
-    if not temp or not prev:
-        return False
+    if temp.value == prev.value and not temp.next and not prev.next:
+        return True
     else:
-        return temp.value == prev.value
+        return False
     
 def print_list(head):
     curr = head
@@ -63,5 +66,7 @@ def main():
     head = Node(1)
     print("Is LinkedList a palindrome? " + str(is_palindrome(head)))
 
+    head = None
+    print("Is LinkedList a palindrome? " + str(is_palindrome(head)))
 
 main()
