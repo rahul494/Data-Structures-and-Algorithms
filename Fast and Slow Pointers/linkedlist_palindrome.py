@@ -10,8 +10,8 @@ def is_palindrome(head):
     slow, fast = head, head
     prev, temp = None, None
 
+    # reverse first half of linked list
     while fast and fast.next:
-        
         fast = fast.next.next
         # change pointer to previous node
         temp = slow.next
