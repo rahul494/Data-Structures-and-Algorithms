@@ -1,3 +1,5 @@
 {
-    "python.linting.enabled": false
+    "python.linting.enabled": false,
+    "vscode-pets.position": "explorer",
+    "vscode-pets.theme": "forest"
 }
